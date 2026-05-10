@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>SAT Bahasa Madura - KKG Wahed Hasyim (Aman)</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUwSURBVHgB7Z1LbFxFFIafc+9tOx5CmiZVhVYIUilCQmyyACGKBRKiC2qBEBtYIaEsWLBgQUISKxYgQQAlCxYsYIEiFhWhgIRQEgJChaSqQgJqkzZAwjQYz+OYe2eBmUynPbZnus/M/b9kprn3zPnPd/85c+beaUCrVasV0A4QDoNwqMfj8UYikUgpMzMzA9///v3Rf9u2baN8Pk/tdpu6XWl2dlbr9bpKpVJ6NptNesMwDpumaR4bG3svlUp9UF9f/1ZNTc0H09PTVC6XqdlsUqfToW63S0IIkqSIJEk0Pz9PoVCIhBCkaZqUy+VUuVymYrEowlGtVkcmk0kZhmEUCgWVy+XU7/dFb2ZmhoLB4MiyLErLsvh6vV4aDAbD169fvxYOh9+bnZ39YGVlZWx4ePh7qVTq4GAwoFarRZVKhQzDoHw+T5lMhqrVKmmaxo+/KMsyBQIBevHFFykajZIkSSRJEvV6PUqlUtRqtSiXy4lwZDKZkWmaYpBzc3MVi8ViZFlWTIdhGJZlGcMwBXEcx0mhB1JXV1f3JMuycF2XbNsm27YpFouRpml8TgYGBqihoYFaW1upra2N2tvbqbW1lf/xeDzU0dFBnZ2d1N3dTQghhBAPYhiGYRiGYRgMwzAMwzAMw2AYhsEwDINhGAbDMAyDYRgGwzAMw2AYhsEwDINhGIZhmIZhGIZhGIbBMAyDYRgGwzAMg2EYBsPg9PQ0nTp1ij777DOSJOmP/T///DMpFApyXZdEEBAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEwTC4b7998Pbbb1NzczNJkjR+JUl9fb1069YtMQwGQRiEQRgEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEgzs2NkZvvPEGPfPMM3T8+HH64osvyLIs6na71Ov1SJIk/bXXXqPGxkbK5XI0GAxIlmVSqVSqUCioYrFIBmGQIAgEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEYRgMk8vlhi22bNmSq1arelKSJIlEordcLkej0SgpikKlUoksyyLLskjTNKpUKkRxOJRIJCiVSlE6naZwOEwIBMIwDIZBEARBEARBEARBEARBEARBEARBEARBEARBEIRCEH68pufz+TfHxsb2NDU1vRqLxZr7+/sp02yWaDSiVCpFbW1t1NbWRsFgkDqdDskFAgUSiQSFw2FKZjIkSxIJgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgqGpqanN2WyWVE0jYRBwXZdEoUiJZJLC0RiFQg9IkiRBEARBEARBEARBEARBEARBEARBEARBEARBEARBEASCIAgGB4MjqhAIUq1WSZVKkSzLpEwmImEYDIfD4fB/+Q8AAAD//+FvR6s4x5SNAAAAAElFTkSuQmCC">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs2-fix@0.0.1/qrcode.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); min-height: 100vh; }
+        .login-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .login-card { background: white; border-radius: 20px; padding: 40px; width: 100%; max-width: 450px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); text-align: center; }
+        .login-logo { width: 100px; height: 100px; background: linear-gradient(135deg, #1e3c72, #2a5298); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-weight: bold; font-size: 1rem; text-align: center; line-height: 1.3; padding: 10px; }
+        .login-card h2 { color: #1e3c72; margin-bottom: 5px; }
+        .login-subtitle { color: #666; margin-bottom: 20px; font-size: 0.85rem; }
+        .login-card input { width: 100%; padding: 12px 15px; margin: 10px 0; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; }
+        .login-card input:focus { border-color: #1e3c72; outline: none; }
+        .login-btn { width: 100%; padding: 12px; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 20px; }
+        .login-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .error-msg { color: #e74c3c; text-align: center; margin-top: 15px; font-size: 0.9rem; }
+        .loading-spinner { display: inline-block; width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #1e3c72; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 10px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .app-container { display: none; max-width: 1400px; margin: 20px auto; background: #f0f4f8; border-radius: 20px; overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-img { width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; text-align: center; font-size: 0.7rem; line-height: 1.2; }
+        .title h1 { font-size: 1.3rem; margin-bottom: 3px; }
+        .title p { font-size: 0.7rem; opacity: 0.9; }
+        .user-info { display: flex; gap: 20px; align-items: center; }
+        .logout-btn { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+        .dashboard { background: white; margin: 20px; border-radius: 15px; padding: 25px; }
+        .exam-container { background: white; margin: 20px; border-radius: 15px; padding: 25px; }
+        .btn-primary { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin: 5px; }
+        .btn-success { background: #27ae60; color: white; padding: 12px 25px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 20px; }
+        .soal-item { background: #fef9e6; margin-bottom: 25px; padding: 20px; border-radius: 15px; border-left: 6px solid #f39c12; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .match-row { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; justify-content: space-between; }
+        .match-left { font-weight: bold; flex: 2; min-width: 200px; }
+        select { padding: 8px 15px; border-radius: 8px; border: 1px solid #ccc; background: white; font-size: 0.9rem; min-width: 200px; }
+        .truefalse { display: flex; gap: 20px; margin-top: 10px; }
+        .truefalse label { cursor: pointer; background: #f0f0f0; padding: 8px 18px; border-radius: 30px; transition: 0.2s; }
+        .truefalse input:checked+label { background: #1e3c72; color: white; }
+        .radio-group { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 12px; }
+        
+        /* Gambar lebih besar & responsif */
+        .pg-gambar-container { 
+            display: flex; 
+            align-items: center; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            margin-bottom: 15px; 
+            background: #fff5e8;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        .pg-image { 
+            width: auto; 
+            height: auto;
+            max-width: 180px;
+            max-height: 180px;
+            min-width: 100px;
+            min-height: 100px;
+            object-fit: contain; 
+            border-radius: 16px; 
+            background: #ffffff; 
+            padding: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #ffd89a;
+        }
+        .pg-question-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            background: #fff2e0;
+            padding: 8px 15px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        @media (max-width: 640px) {
+            .pg-gambar-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .pg-image {
+                max-width: 140px;
+                max-height: 140px;
+                align-self: center;
+            }
+        }
+        @media (min-width: 1024px) {
+            .pg-image {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+        
+        .cerita { background: #e8f4f8; padding: 18px; border-radius: 12px; margin: 15px 0; line-height: 1.6; font-style: normal; border: 1px solid #b9e0f0; max-height: 300px; overflow-y: auto; }
+        .question-title { font-size: 1.3rem; font-weight: bold; margin: 20px 0 10px; color: #1e3c72; border-bottom: 3px solid #f39c12; display: inline-block; padding-bottom: 5px; }
+        footer { text-align: center; padding: 20px; margin-top: 20px; color: #666; font-size: 0.8rem; }
+        button { transition: 0.2s; }
+        button:hover { opacity: 0.9; transform: scale(1.02); }
+        .result { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 20px; border-radius: 16px; margin: 20px; text-align: center; font-size: 1.2rem; }
+        .info-ujian { background: #d4edda; padding: 12px; border-radius: 10px; margin-bottom: 20px; color: #155724; font-weight: bold; text-align: center; }
+        @keyframes fadeInOut { 0% { opacity: 0; transform: translateX(-50%) translateY(20px); } 15% { opacity: 1; transform: translateX(-50%) translateY(0); } 85% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+        .success-toast { animation: fadeInOut 3s forwards; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #27ae60; color: white; padding: 12px 24px; border-radius: 50px; z-index: 2000; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); white-space: nowrap; }
+        /* TIMER DISPLAY */
+        .timer-bar {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 15px;
+            border: 1px solid #ffeeba;
+            display: inline-block;
+            width: auto;
+        }
+        .timer-warning {
+            background: #f8d7da;
+            color: #721c24;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        @media (max-width: 768px) { .match-row { flex-direction: column; align-items: flex-start; } .success-toast { white-space: normal; text-align: center; font-size: 0.9rem; width: 90%; } }
+        
+        /* Overlay keamanan saat pindah tab */
+        .security-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            gap: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .security-overlay h1 { font-size: 2rem; }
+        .security-overlay p { font-size: 1.2rem; max-width: 80%; }
+    </style>
+</head>
+<body>
+
+<div class="login-container" id="loginPage">
+    <div class="login-card">
+        <div class="login-logo">KKG<br>WAHED<br>HASYIM</div>
+        <h2>📖 SAT Bahasa Madura</h2>
+        <div class="login-subtitle">SAT Bahasa Madura | Kelas 6 | KKG Wahed Hasyim</div>
+        <input type="text" id="username" placeholder="Username" autocomplete="off">
+        <input type="text" id="password" placeholder="Password">
+        <button class="login-btn" onclick="login()" id="loginBtn">Masuk & Mulai Ujian</button>
+        <div id="loginError" class="error-msg"></div>
+        <div style="margin-top: 20px; font-size: 0.7rem; text-align: center; color: #999;">
+            <strong>Peraturan Ujian:</strong><br>• Dilarang pindah tab / aplikasi<br>• Waktu 60 menit<br>• Sistem akan logout otomatis jika melanggar
+        </div>
+    </div>
+</div>
+
+<div class="app-container" id="appContainer">
+    <div class="header">
+        <div class="logo-area">
+            <div class="logo-img">KKG<br>WAHED<br>HASYIM</div>
+            <div class="title"><h1>📖 SAT Bahasa Madura</h1><p>SAT Bahasa Madura | Kelas 6 | Mothak Tao Ngajhi</p></div>
+        </div>
+        <div class="user-info"><span id="displayName">👤 </span><span id="roleDisplay"></span><div class="logout-btn" onclick="forceLogout('Anda keluar dari ujian.')">🚪 Keluar</div></div>
+    </div>
+    <div id="guruDashboard" class="dashboard" style="display: none;">...</div>
+    <div id="siswaDashboard" class="dashboard" style="display: none;"></div>
+    <div id="examArea" class="exam-container" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div class="info-ujian">📖 SAT Bahasa Madura | Selesaikan semua soal dengan teliti</div>
+            <div id="timerDisplay" class="timer-bar">⏱️ Sisa Waktu: 01:00:00</div>
+        </div>
+        
+        <!-- Cerita Inti Mothak Tao Ngajhi -->
+        <div class="question-block">
+            <div class="question-title">📖 Mothak Tao Ngajhi (Cerita Rakyat)</div>
+            <div class="cerita">
+                <h3>Kyaè Ali & Radhin Arja Tirtadinèngrat</h3>
+                <p>E mongghing temorra Kottha Songennnep båda séttong dhisa anyama Dhisa Kalimo'o'. Neng è dhisa ka'dinto bådä Kampong Bhârângbhâng. Neng Bhårångbhẳng ka'dinto båda séttong olama' së kalonta kalaban sebbhudhân Kè Bhårängbhâng, asmaèpon Kyaè Ali. Kyaè Ali ka'dinto pottra lake'na Kyaè Hatib Paddhusân, jhughän aropa'aghi bäjäèpon Pangeran Katandur. Kyaè Ali ka'dinto sala sèttong olama sè ékasengkaè tor nyebbhärraghi aghåma islam kong-langkong molang elmo tasawwuf. Kyaè Ali sabbhân arèna morok ngajhi.
+Kacator è dâlem carèta, è sèttong bäkto Kyaè Ali këngèng kaparcajä'än dâri Rato Songennep, Rato Panembhä'än Somala, kaangghuy morok pottrana rato sè asmana Radhin Arja Tirtadinèngrat sè èkennal sareng jhajhuluk Sultan Abdurrahman. Sultan Abdurrahman sabbhän arè ajhår ngajhi tor elmo aghama apolong sareng satrè sè laèn.
+Ekala panda'na caréta, Sultan Abdurrahman épokol otabá épeccot sareng Kyae Ali, kantos kapyarsa da' Rato Panembhä'än Somala. É båkto ka'dinto jhughân Rato Panembha'an Somala dhuka, tor makon sala sèttong pongghåbä karaton kaangghuy mapak Kyaè Ali nyopprè nyabis da' Rato Panembhä'än Somala. Saamponna Kyaè Ali nyabis da rato, Rato Panembha'an Somala engghål marèksanè.
+"Bha' bhenderra dhika mokol otabå meccot ana bula?"
+Kyse All mator, "Engghi lerres ka'dinto rato". Rato maréksanė polè.
+"Bha napè marghāna dhika sampè' mokol otaba meccot ana' bula?"
+Kyaè Ali mator, "bhädhän kaula kantos mokol otaba meccot polaèpon radhin ka'dinto cè' beddhellä tor cè' bhudhuna. Maksod bhädhän kaula ta' mokola otaba meccotta orèngnga. Nangèng maèlanga bhudhuna".
+Rato Panembhä'än Somala pas adhabu, "Mon bärinto dhika bisa maèlang beddhel bän kabhudhuwân?"
+Kyaè Ali mator, "Ngėstowaghi dhābu. Manabi Allah kasokan tor aparèng".
+Rato adhabu polè, "Nèko' bulâ andi' mothak ce' beddhellä bân cẻ bhudhuna. Patoro' oca', paèlang bhudhuna, jhā pabāli sabellunna pènter!"
+Kyaè Ali mator, "Ngèstowaghi dhabu ajunan rato'.
+Kyaè Ali ghubhår sambi nonton mothak. Sabbhän Kyaè Ali morok satrèna, mothaggha épanggher è paddhuna langghår. Kyaè Ali makon ka sadhājā santrèna, sabbhân ngajhiya épakon abhäkta lèntè, sabbhân ongghå ka langghår. Para-santrè èpakon meccot mothak kasebbhut. È sèttong båkto mothak acerrèng sakė".
+"Sake'..!!! sakė'..!!!"
+È séttong bâkto mothak ka'dinto èkabhäreng ajhālā jhuko'. Mothak ka'dinto pas épanegghu' opet. Opet èngghi ka'dinto seppetta nyèyor sè èpèntè nyaropaè tampar mènangka obhur. Kyaè Ali pas adhabu dã' mothak.
+"He... mothak! tegghu' opet rèya jhā sampè' ocol, sabellunna dâpa' ka tanangnga. Mon la dapa ka tanangnga pas arassa bullä otabā panas, abālā ka sèngko'!"
+Mothak lajhu atoro' dhābuna Kyaè Ali. Saamponna Kyaè Ali abāk abit sè ajhālā, opet ampon karè dã-panda'. Apoyya dåpa ka ghårighi'na mothak. Mothak pas lajhu acerrèng,
+"Panas, Kyaè Alil Panas, Kyaè Alil
+E bikto ka'dinto jhughän kalaban kasokannėpon Allah sè Maha Kobasa mothak bisa acaca. Mothak pas lajhu ëbhäkta ghubhär sareng Kyaè Ali kaangghuy èyajhari ngajhi. Saamponna ka'dinto mothak pas pènter ngajhi.
+Mothak bisa ngajhi, nandhä'aghi mothak ampon däpa' da bäktona kaangghuy épabali da ka rato. Sadapa'na ka karaton Kyaè Ali mabädä papangghiyan aghung kalaban Rato Panembhä'än Somala jhughân sadhäjäna pongghåbå karaton kaangghuy mabādā salameddhân. Saamponna pada rampong salameddhän pas ékabidhi. Mothak kalabân Kyaè Ali èparèngè Al-Qur'an. Mothak ghåpanėka pas terros ngajhi.
+Ngoladhi mothak bisa ngajhi kalaban pènter, rato jhughân sadhája pongghåbä karaton kasambu'. Saamponna mothak ampon lastarè ngajhi, Kyaè Ali pas ngontallaghi gheddhång ka mothak. Salèrana pas adhabu,
+"Elmo kala ka båbåtek! Maksottèpon sanajjän bännya' élmona tapè bâbâtegghå jhubā, tada ghunana".
+Rato nyaroju'i dhäbuna Kyaè Ali. Kyaè Ali sèdhä è taon 1092 Hijjriyah. Pasarèyannėèpon båda neng Dhisa Kalimo'o', Kampong Bhârângbhãng, sẽ langkong kalonta kalaban Asta Ghumo.
+</p>
+            </div>
+        </div>
+
+        <div class="question-title">🔗 A. Eyatorè pasangngaghi okara-okara sè bâdã è bābā panèka sareng ca'-oca' sè akasandhing</div>
+        <div id="matchingPart1"></div>
+
+        <div class="question-title">🌾 B. Èyatorè pasangngaghi ca'-oca' sè bâdã è bābā panèka sareng ca'-oca' sè èkasandhing, nyopprè lerres mènorot macemma prosa.</div>
+        <div id="matchingProsa"></div>
+
+        <div class="question-title">🍘 Kropo' Tangghuk (Bacaan)</div>
+        <div class="cerita">
+            <p>Kropo' khas Mekkasän sè ghâdhuwân okoran rajā panèka èkaghâbây däri teppong kanji sareng bujā. Ékoca' kropo' tangguk amarghä salastarėna èghuring rajana akadhi tangguk. Tangguk èngghi panèka bhängonna pada sareng songko' sè lèbär. Tangguk ghäpanèka èkaghabây dâri ra-kara daunna trěbung sè kerrèng. Sabellunna èghuring, kropo' tangguk panèka okoranna 28 cm x 50 cm. Namong salastarèna éghuring bisa aobâ dhåddhi rajā kantos okoranna 40 cm x 75 cm.
+Salaèn okoranna sè rajā, kropo' panèka jhughân ghaduwän kaajibhän laèn, akadhi carana aghābay tor hasèlla. Salastarèna adhunan kropo' ka'dissa' écampor tor èbhängon, adhunan ka'dissa lajhu ėjhemmor sopajä kerrèng. Manabi bhunten, rassana bisa ta' saè. Kaangghuy aghuring kropo' ka'dissa', èkaparlo korang langkong 10 kilo mènnya' ghuring sareng bâjhân sè okoranna raja. Nyopprè hasèlla kropo' bisa raja, artèna bisa langkong rajă dâri bājhānna, carana aghuring kodhu lerres, èngghi panèka kalaban nyaba' adhunan kropo' sè ampon kerrèng è pèngghirrä bäjhân, bännè mamaso' kropo' sè ampon kerrèng ka bäjhân. Lėburră polè, manabi kropo' sè ampon èghuring ta' paju ėjhuwal, karèna kropo' bisa èjhemmor tor èghuring polė. Kropo' tangghuk panèka possa' ėjhuwäl neng sar-pasar Mekkasan</p>
+        </div>
+        <div class="question-title">✔️ C. Èyatorè maos ghancaran è bâbā panèka kalaban tètè. (Lerres / Sala)</div>
+        <div id="truefalseSection"></div>
+
+        <div class="question-title">📸 D. Èyatorè èssè’è pètanya è bâbâ panèka kalabân mèlè jâwâbhân sè palèng lerres!</div>
+        <div id="pilganGambar"></div>
+
+        <button id="submitBtn" class="btn-success">🧾 KIRIM JAWABAN & HITUNG SKOR AKHIR</button>
+        <div id="resultArea" class="result" style="display: none;"></div>
+        <footer>✨ Selamat jawab | Sistem Pengawasan Aktif | Bahasa Madura Kelas VI ✨</footer>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbwD71OZZ7YZW8ANpvM97CrctyihUY6pCkyOi0jjJFng3vlYzJj-vR-Ec9UY7bedtInfaQ/exec";
+    
+    // Data Jawaban (sama seperti sebelumnya)
+    const match1Left = ["1. Dhābuna Kyaè Ali ka mothak ...","2. Dhabuna Kyaè Ali saamponna mothak ngajhi ...","3. Sadapa'na ka karaton Kyaè Ali mabādā ... kalaban Rato Panembhā'ân Somala","4. Sè kasambu' ngoladhi mothak tao ngajhi ...","5. ... Panèka pasarèyannèpon Kyaè Ali sè bâdā è Dhisa Kalimo'o.","6. Kyaè Ali morok pottrana pasėra ...","7. Panembhā'ân Rato Songennep engghi panèka ....","8. Radhin Arja Tirtadinèngrat ngaghungė jhajhuluk ....","9. Sultan Abdurrahman sabbhân arè ... tor elmo aghâma.","10. Panembhā'ân Somala dhuka amargha Sultan Abdurrahman ... sareng Kyaè Ali."];
+    const match1Options = ["a. \"Èlmo kala ka bâbâtek!\"","b. Papangghiyan aghung","c. Rato sareng pongghābā","d. \"He.. mothak! tegghu' opet rèya...\"","e. Asta Ghumo","f. Panembhā'ân Somala","g. Ajhar ngajhi","h. Rato Songennep","i. Épeccot","j. Sultan Abdurrahman"];
+    const match1Keys = ["d","a","b","c","e","h","f","j","g","i"];
+    const prosaLeft = ["1. Mara ajām ngèrremmè","2. Ngakan atè","3. Asèl ta' adhina asal","4. Nondu' bânnè berra' ka èlong","5. Akantha kocèng so patè'","6. Colo' kopè'"];
+    const prosaOptions = ["Saloka","Parèbhâsan","Èbhârât"];
+    const prosaKeys = ["Saloka","Parèbhâsan","Èbhârât","Parèbhâsan","Saloka","Parèbhâsan"];
+    const tfQuestions = ["1. Kropo' tangguk possa' ėjhuwal è sar-pasar Mekkasân.","2. Nyopprè hasèlla rajā adhunan kropo' sè ampon kerrèng langsung èghuring.","3. Okoranna kropo' tangguk salastarèna èghuring 40 cm x 75 cm.","4. Ojhung èkamaèn kaangghuy mènta ojhân.","5. Buwa anaghân maksoddha ana' bungso sè palèng èkanèserrè."];
+    const tfKeys = [true, false, true, true, false];
+    const pgGambarData = [
+        { text: "lamon èobâ ḍâ’ latèn madhurâna... ", image: "carakan1.png", options: ["Atanè","Adhâghâng","Polisi","Ghuru"], correct: "Ghuru" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan2.png", options: ["Atanè","Adhâghâng","Polisi","Ghuru"], correct: "Atanè" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan3.png", options: ["Atanè","Adhâghâng","Polisi","Ghuru"], correct: "Adhâghâng" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan4.png", options: ["Kelas 6","Kelas 5","Kelas 4","Kelas 3"], correct: "Kelas 6" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan5.png", options: ["Èlmo tong-bitongan","Èlmo Aghâma","Èlmo pertanian","Èlmo Astrnomi"], correct: "Èlmo Aghâma" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan6.png", options: ["Jurusan Akuntansi","Jurusan Ekonomi","Jurusaan Pertanian","Jurusan Pendidikan"], correct: "Jurusan Pendidikan" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan7.png", options: ["Padi","Bhâko","Jhâghung","Oto'"], correct: "Padi" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan8.png", options: ["Padi","Bhâko","Jhâghung","Oto'"], correct: "Jhâghung" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan9.png", options: ["Èlmo Ekomoni","Èlmo tong-bitongan","Èlmo Pertanian","Èlmo pangaonèngan"], correct: "Èlmo tong-bitongan" },
+        { text: "lamon èobâ ḍâ’ latèn madhurâna...", image: "carakan10.png", options: ["Ajhâr pabhâjheng","Adhâ 'âr pabânnya'","Abhânto oreng seppo","Nyarè pangaorèbhân"], correct: "Ajhâr pabhâjheng" }
+    ];
+
+    let currentUser = null;
+    let studentsData = {};
+    let timerInterval = null;
+    let timeLeft = 60 * 60; // 60 menit dalam detik
+    let examActive = false;
+    let visibilityWarn = false;
+
+    function showSuccessToast(msg){let t=document.createElement('div');t.className='success-toast';t.innerText=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),3000);}
+    
+    async function callAPI(action, params = {}) {
+        try {
+            const url = new URL(API_URL);
+            url.searchParams.append('action', action);
+            Object.keys(params).forEach(k => url.searchParams.append(k, typeof params[k] === 'object' ? JSON.stringify(params[k]) : params[k]));
+            const response = await fetch(url.toString());
+            return await response.json();
+        } catch (error) { return { success: false, error: error.message }; }
+    }
+    
+    async function loadStudents() {
+        try {
+            const result = await callAPI('getStudents');
+            if (result.success && result.students) { studentsData = result.students; return true; }
+            return false;
+        } catch (error) { return false; }
+    }
+    
+    // Render semua soal
+    function renderMatching1() {
+        let html = '';
+        for (let i = 0; i < match1Left.length; i++) {
+            html += `<div class="soal-item"><div class="match-row"><span class="match-left">${match1Left[i]}</span><select id="match1_${i}"><option value="">-- Pilih jawaban --</option>${match1Options.map(opt => `<option value="${opt.charAt(0)}">${opt}</option>`).join('')}</select></div></div>`;
+        }
+        document.getElementById("matchingPart1").innerHTML = html;
+    }
+    function renderProsa() {
+        let html = '';
+        for (let i = 0; i < prosaLeft.length; i++) {
+            html += `<div class="soal-item"><div class="match-row"><span class="match-left">${prosaLeft[i]}</span><select id="prosa_${i}"><option value="">-- Pilih jenis --</option>${prosaOptions.map(opt => `<option value="${opt}">${opt}</option>`).join('')}</select></div></div>`;
+        }
+        document.getElementById("matchingProsa").innerHTML = html;
+    }
+    function renderTrueFalse() {
+        let html = '';
+        tfQuestions.forEach((q, idx) => {
+            html += `<div class="soal-item"><div><strong>${q}</strong></div><div class="truefalse"><label><input type="radio" name="tf_${idx}" value="true"> ✔ Lerres</label><label><input type="radio" name="tf_${idx}" value="false"> ❌ Sala</label></div></div>`;
+        });
+        document.getElementById("truefalseSection").innerHTML = html;
+    }
+    function renderPilganDenganGambar() {
+        let html = '';
+        pgGambarData.forEach((soal, idx) => {
+            const imgSrc = soal.image || "https://placehold.co/300x200?text=Gambar+Soal";
+            html += `<div class="soal-item"><div class="pg-gambar-container"><img class="pg-image" src="${imgSrc}" alt="Gambar soal ${idx+1}" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/300x200?text=Ilustrasi+Soal';"><span class="pg-question-text">${idx+1}. ${soal.text}</span></div><div class="radio-group">`;
+            soal.options.forEach(opt => { html += `<label style="margin-right: 18px;"><input type="radio" name="pg_img_${idx}" value="${opt}"> ${opt}</label>`; });
+            html += `</div></div>`;
+        });
+        document.getElementById("pilganGambar").innerHTML = html;
+    }
+
+    // Timer update & expiration
+    function updateTimerDisplay() {
+        let hours = Math.floor(timeLeft / 3600);
+        let minutes = Math.floor((timeLeft % 3600) / 60);
+        let seconds = timeLeft % 60;
+        const timerElem = document.getElementById('timerDisplay');
+        if(timerElem) {
+            timerElem.innerHTML = `⏱️ Sisa Waktu: ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+            if(timeLeft <= 300) timerElem.classList.add('timer-warning');
+        }
+        if(timeLeft <= 0 && examActive) {
+            stopTimer();
+            alert("Waktu ujian telah habis! Jawaban akan dikirim secara otomatis.");
+            finishExam(true);
+        }
+    }
+    
+    function startTimer() {
+        if(timerInterval) clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+            if(examActive && timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
+            } else if(timeLeft <= 0 && examActive) {
+                clearInterval(timerInterval);
+                finishExam(true);
+            }
+        }, 1000);
+    }
+    function stopTimer() { if(timerInterval) { clearInterval(timerInterval); timerInterval = null; } }
+    
+    // ========== KEAMANAN PINDAH LAYAR ==========
+    let securityActive = false;
+    function bindSecurityEvents() {
+        // Visibility API: jika pindah tab atau aplikasi (alt+tab di HP juga terdeteksi)
+        document.addEventListener('visibilitychange', function() {
+            if(!examActive) return;
+            if(document.hidden) {
+                // Siswa mencoba pindah layar
+                securityViolation("⚠️ TERDETEKSI PINDAH LAYAR! Ujian dihentikan.");
+            }
+        });
+        
+        // Mencegah klik kanan, copy paste, inspect element (tambahan keamanan)
+        document.addEventListener('contextmenu', (e) => { if(examActive) { e.preventDefault(); securityViolation("Aksi tidak diizinkan saat ujian berlangsung."); } });
+        document.addEventListener('keydown', (e) => {
+            if(!examActive) return;
+            // Cegah F12, Ctrl+Shift+I, Ctrl+U, Ctrl+C, Ctrl+V, Ctrl+X
+            if(e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) || 
+               (e.ctrlKey && (e.key === 'u' || e.key === 'U')) ||
+               (e.ctrlKey && (e.key === 'c' || e.key === 'C')) ||
+               (e.ctrlKey && (e.key === 'v' || e.key === 'V')) ||
+               (e.ctrlKey && (e.key === 'x' || e.key === 'X'))) {
+                e.preventDefault();
+                securityViolation("Dilarang menggunakan shortcut pengembang / copy-paste saat ujian!");
+            }
+        });
+        
+        // Cegah blokir devtools (deteksi buka console)
+        setInterval(() => {
+            if(examActive) {
+                const before = new Date().getTime();
+                debugger;
+                const after = new Date().getTime();
+                if(after - before > 100) {
+                    securityViolation("Deteksi DevTools / Console! Ujian dibatalkan.");
+                }
+            }
+        }, 2000);
+    }
+    
+    function securityViolation(reason) {
+        if(!examActive) return;
+        examActive = false;
+        stopTimer();
+        // Tampilkan overlay merah + logout otomatis
+        const overlay = document.createElement('div');
+        overlay.className = 'security-overlay';
+        overlay.innerHTML = `<h1>⚠️ PELANGGARAN KEAMANAN ⚠️</h1><p>${reason}</p><p>Ujian otomatis dihentikan karena mencoba pindah layar / menggunakan alat yang dilarang.</p><button onclick="location.reload()" style="padding:10px 20px;background:white;color:black;border:none;border-radius:8px;">Kembali ke Login</button>`;
+        document.body.appendChild(overlay);
+        // Logout paksa
+        setTimeout(() => { forceLogout(reason); }, 500);
+    }
+    
+    // Fungsi perhitungan nilai
+    function computeTotal() {
+        let matchOk=0, prosaOk=0, tfOk=0, pgOk=0;
+        for(let i=0;i<match1Left.length;i++) { let sel=document.getElementById(`match1_${i}`); if(sel && sel.value===match1Keys[i]) matchOk++; }
+        for(let i=0;i<prosaLeft.length;i++) { let sel=document.getElementById(`prosa_${i}`); if(sel && sel.value===prosaKeys[i]) prosaOk++; }
+        for(let i=0;i<tfQuestions.length;i++) { let radios=document.querySelectorAll(`input[name="tf_${i}"]`); let selected=null; for(let r of radios) if(r.checked){selected=r.value==='true';break;} if(selected!==null && selected===tfKeys[i]) tfOk++; }
+        for(let i=0;i<pgGambarData.length;i++) { let radios=document.querySelectorAll(`input[name="pg_img_${i}"]`); let selectedVal=null; for(let r of radios) if(r.checked){selectedVal=r.value;break;} if(selectedVal===pgGambarData[i].correct) pgOk++; }
+        let totalPoints = (matchOk*5)+(prosaOk*3)+(tfOk*4)+(pgOk*2);
+        let maxPoints = 50+18+20+20;
+        const finalScore = Math.round((totalPoints / maxPoints) * 100);
+        return { raw: totalPoints, max: maxPoints, score: finalScore, matchOk, prosaOk, tfOk, pgOk };
+    }
+    
+    async function finishExam(isAuto = false) {
+        if(!examActive && !isAuto) return;
+        if(document.querySelector('.security-overlay')) return;
+        examActive = false;
+        stopTimer();
+        const result = computeTotal();
+        const score = result.score;
+        const details = `Match:${result.matchOk}/10, Prosa:${result.prosaOk}/6, B/S:${result.tfOk}/5, PG Gambar:${result.pgOk}/10 | Nilai: ${score}`;
+        if(currentUser && currentUser.role === 'siswa') {
+            await callAPI('saveExam', { username: currentUser.username, score: score, correctCount: result.raw, results: JSON.stringify([details]) });
+        }
+        document.getElementById('resultArea').style.display = 'block';
+        document.getElementById('resultArea').innerHTML = `<h3>🎉 Skor Akhir Anda</h3><p style="font-size:2rem;font-weight:bold">${score}</p><p>✅ Benar Match: ${result.matchOk}/10 | Prosa: ${result.prosaOk}/6 | B/S: ${result.tfOk}/5 | PG Gambar: ${result.pgOk}/10</p><p>📊 Total Poin: ${result.raw} / ${result.max}</p><button class="btn-primary" onclick="forceLogout('Ujian selesai')">Keluar & Selesai</button>`;
+        showSuccessToast(isAuto ? `⏰ Waktu habis! Nilai: ${score}` : `✅ Ujian selesai! Nilai: ${score}`);
+        document.getElementById('submitBtn').disabled = true;
+    }
+    
+    function forceLogout(msg) {
+        stopTimer();
+        examActive = false;
+        document.getElementById('loginPage').style.display='flex';
+        document.getElementById('appContainer').style.display='none';
+        document.getElementById('examArea').style.display='none';
+        document.getElementById('guruDashboard').style.display='none';
+        document.getElementById('username').value='';
+        document.getElementById('password').value='';
+        if(msg) alert(msg);
+    }
+    
+    async function login() {
+        let username = document.getElementById('username').value.trim();
+        let password = document.getElementById('password').value;
+        let loginBtn = document.getElementById('loginBtn');
+        let errorDiv = document.getElementById('loginError');
+        if(!username || !password) { errorDiv.textContent = 'Username dan password harus diisi!'; return; }
+        loginBtn.disabled = true;
+        loginBtn.innerHTML = '<span class="loading-spinner"></span> Memproses...';
+        errorDiv.textContent = '';
+        try {
+            if(username === 'guru' && password === 'admin123') {
+                currentUser = {username:'guru', role:'guru', name:'Guru'};
+                document.getElementById('loginPage').style.display='none';
+                document.getElementById('appContainer').style.display='block';
+                document.getElementById('guruDashboard').style.display='block';
+                document.getElementById('examArea').style.display='none';
+                document.getElementById('displayName').innerHTML='👩‍🏫 Guru';
+                document.getElementById('roleDisplay').innerHTML='👩‍🏫 Guru';
+                document.getElementById('guruDashboard').innerHTML=`<div><h2>📊 Dashboard Guru</h2><p>Selamat datang, Guru! Data siswa bisa dilihat melalui API.</p><button class="btn-primary" onclick="forceLogout('Logout')">Logout</button></div>`;
+                return;
+            }
+            await loadStudents();
+            if(studentsData[username] && studentsData[username].password === password) {
+                currentUser = { username: username, role: 'siswa', name: studentsData[username].name || username };
+                document.getElementById('loginPage').style.display='none';
+                document.getElementById('appContainer').style.display='block';
+                document.getElementById('guruDashboard').style.display='none';
+                document.getElementById('siswaDashboard').style.display='none';
+                document.getElementById('examArea').style.display='block';
+                document.getElementById('displayName').innerHTML=`👤 ${currentUser.name}`;
+                document.getElementById('roleDisplay').innerHTML='👨‍🎓 Siswa (SAT Ujian Bahasa Madura) | Dilarang pindah layar!';
+                renderMatching1();
+                renderProsa();
+                renderTrueFalse();
+                renderPilganDenganGambar();
+                document.getElementById('submitBtn').onclick = () => finishExam(false);
+                // Reset timer & status
+                timeLeft = 60 * 60;
+                examActive = true;
+                updateTimerDisplay();
+                startTimer();
+                bindSecurityEvents();
+                showSuccessToast("Ujian dimulai! Dilarang pindah tab / aplikasi. Waktu 60 menit.");
+            } else {
+                errorDiv.textContent = 'Username atau password salah! Periksa kembali data Anda.';
+            }
+        } catch (error) { errorDiv.textContent = 'Gagal terhubung ke server.'; } 
+        finally { loginBtn.disabled = false; loginBtn.innerHTML = 'Masuk & Mulai Ujian'; }
+    }
+    
+    window.forceLogout = forceLogout;
+    loadStudents().catch(console.error);
+</script>
+</body>
+</html>
